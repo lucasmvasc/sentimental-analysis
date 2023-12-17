@@ -1,5 +1,6 @@
 import os
 import json
+import ngrok
 from flask import Flask, request, jsonify
 
 from models.transcription import get_text_from
@@ -34,4 +35,6 @@ def analyze():
     return result
 
 if __name__ == "__main__":
-   app.run()
+    
+    public_url = ngrok.connect(5000)
+    app.run()
