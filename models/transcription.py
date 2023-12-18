@@ -1,7 +1,7 @@
 import os
 import whisper
 
-model = whisper.load_model("small")
+model = whisper.load_model("medium")
 
 def get_text_from(audio):
     # Create uploads folder if not exists

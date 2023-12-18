@@ -32,7 +32,8 @@ def analyze():
     # Sentimental Analysis
     result = get_sentiments_from(msg_segments)
 
-    return result
+    json_object = json.dumps(result, indent=4) 
+    return json_object
 
 if __name__ == "__main__":
     
