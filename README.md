@@ -1,7 +1,7 @@
 # Sentimental Analysis
 
 Este repositório contém um programa que realiza a transcrição de áudio MP3 para texto usando a biblioteca da OpenAI: Whisper[^1] e, em seguida, realiza a análise de sentimentos usando o modelo pré treinado provido pela nlptown: bert-base-multilingual-uncased-sentiment[^2].
-Tudo isso conectado por meio do NgRok, que provém a possibilidade de tornar essa API pública.
+Tudo isso conectado por meio do NgRok, que provém a possibilidade de tornar essa URL pública.
 
 ## Requisitos
 
