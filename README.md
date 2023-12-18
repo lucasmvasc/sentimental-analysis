@@ -42,7 +42,7 @@ curl -X POST \
 Esquema de variáveis:<br>
 API_URL="SUA_URL_OBTIDA_NO_NGROK" <br>
 API_KEY="SUA_CHAVE_AQUI" <br>
-AUDIO_FILE="DIRETÓRIO/DO/SEU/AUDIO.mp3"
+AUDIO_FILE="DIRETÓRIO/DO/SEU/AUDIO.mp3" <br>
 PS: A API_URL está no test.py
 
 ## Passo a passo da execução no código: 
