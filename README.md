@@ -22,7 +22,6 @@ ngrok http 5000
 1. Configure o seu arquivo secrets.JSON na root com as variáveis API_KEY e API_URL:
 ```json
 {
-    "API_URL": "SUA_URL_OBTIDA_NO_NGROK"
     "API_KEY": "SUA_CHAVE_AQUI"
 }
 ```
