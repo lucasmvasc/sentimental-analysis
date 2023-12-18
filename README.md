@@ -31,8 +31,6 @@ ngrok http 5000
 - Esse passo tem de ser feito dentro de um ambiente virtual com todas as bibliotecas necessárias instaladas
 
 ## Uso
-Transcrição de Áudio para Texto
-
 Execute o seguinte comando para transcrever um arquivo de áudio MP3 para texto e obter sua análise de sentimentos em formato de dicionário:
 ```bash
 curl -X POST \
