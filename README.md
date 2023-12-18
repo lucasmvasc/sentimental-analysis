@@ -32,9 +32,7 @@ cd seu-repositorio
 
 2. Agora execute o seguinte comando para ativar o túnel de comunicação:
 ```bash
-{
 ngrok http 5000
-}
 ```
 
 3. Em um terminal separado, execute agora o código main.py
