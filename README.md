@@ -9,10 +9,11 @@ Certifique-se de ter os seguintes requisitos instalados:
 
 - Python 3.x
 - Bibliotecas necessárias em um virtual env (instaláveis via `pip install -r requirements.txt`)
-- Instalar NgRok e criar uma conta: [Link aqui](https://ngrok.com/download)
+- Instalar o NgRok e criar uma conta: [Link aqui](https://ngrok.com/download)
 - Anaconda Prompt (para criação de virtual envs): [Link aqui](https://www.anaconda.com/download)
 
 ## Configuração do projeto
+Caso queira executá-lo em sua máquina
 
 1. Execute o seguinte comando para ativar o Ngrok - túnel de comunicação:
 ```bash
@@ -44,6 +45,7 @@ Esquema de variáveis:<br>
 API_URL="SUA_URL_OBTIDA_NO_NGROK" <br>
 API_KEY="SUA_CHAVE_AQUI" <br>
 AUDIO_FILE="DIRETÓRIO/DO/SEU/AUDIO.mp3"
+PS: A API_URL está no test.py
 
 ## Passo a passo da execução no código: 
 1. O texto é transcrito via whisper e salvo em um arquivo JSON dividido com cada segmento da conversação.
@@ -51,7 +53,8 @@ AUDIO_FILE="DIRETÓRIO/DO/SEU/AUDIO.mp3"
 2. O modelo pré-treinado é configurado em formato de pipeline, para assim poder receber uma lista de segmentos/partes da conversa.
 
 3. Para cada uma das partes dessa conversa, é inferido seu respectivo sentimento entre valores inteiros de 1 até 5 (no qual foram convertidos para: Positivo, Ligeiramente Positivo, Neutro, Ligeiramente Negativo e Negativo).
-4. 
+
+4. É retornado um dicionário com cada um dos segmentos de conversa e seu respectivo sentimento.
 
 ## Referências
 [^1]: [Modelo Whisper da OpenAI](https://openai.com/research/whisper)
