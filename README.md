@@ -10,19 +10,16 @@ Certifique-se de ter os seguintes requisitos instalados:
 - Python 3.x
 - Bibliotecas necessárias em um virtual env (instaláveis via `pip install -r requirements.txt`)
 - Instalar NgRok e criar uma conta: [Link aqui](https://ngrok.com/download)
-- Anaconda Prompt (para criação de virtual envs)
+- Anaconda Prompt (para criação de virtual envs): [Link aqui](https://www.anaconda.com/download)
 
-## Instalação
-
-Clone o repositório para o seu ambiente local:
-
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-```
 ## Configuração do projeto
 
-1. Configurar o seu arquivo secrets.JSON com as variáveis API_KEY e API_URL:
+1. Execute o seguinte comando para ativar o Ngrok - túnel de comunicação:
+```bash
+ngrok http 5000
+```
+
+1. Configure o seu arquivo secrets.JSON na root com as variáveis API_KEY e API_URL:
 ```json
 {
     "API_URL": "SUA_URL_OBTIDA_NO_NGROK"
@@ -30,18 +27,13 @@ cd seu-repositorio
 }
 ```
 
-2. Agora execute o seguinte comando para ativar o túnel de comunicação:
-```bash
-ngrok http 5000
-```
-
 3. Em um terminal separado, execute agora o código main.py
-- Esse passo tem de ser feito dentro de um ambiente virtual com todas as bibliotecas anteriores instaladas
+- Esse passo tem de ser feito dentro de um ambiente virtual com todas as bibliotecas necessárias instaladas
 
 ## Uso
 Transcrição de Áudio para Texto
 
-Execute o seguinte comando para transcrever um arquivo de áudio MP3 e obter sua análise de sentimentos em formato de dicionário:
+Execute o seguinte comando para transcrever um arquivo de áudio MP3 para texto e obter sua análise de sentimentos em formato de dicionário:
 ```bash
 curl -X POST \
   -H "Api-Key: $API_KEY" \
@@ -59,4 +51,4 @@ AUDIO_FILE="DIRETÓRIO/DO/SEU/AUDIO.mp3"
 
 2. O modelo pré-treinado é configurado em formato de pipeline, para assim poder receber uma lista de segmentos/partes da conversa.
 
-3. Para cada uma dessas partes de conversa, é inferido qual o sentimento nela presente entre valores inteiros de 1 até 5 (no qual eu converti para Positivo, Ligeiramente Positivo, Neutro, Ligeiramente Negativo e Negativo)
+3. Para cada uma das partes dessa conversa, é inferido seu respectivo sentimento entre valores inteiros de 1 até 5 (no qual foram convertidos para: Positivo, Ligeiramente Positivo, Neutro, Ligeiramente Negativo e Negativo).
